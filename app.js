@@ -1,6 +1,10 @@
-const addressLat = 6;
-const addressLong = 7;
-const positionLat = 3;
-const positionLong = 10;
-const distance = Math.sqrt((addressLat - positionLat) ** 2 + (addressLong - positionLong) ** 2);
-console.log(distance);
+const money = 100;
+const canBuy = money >= 50;
+
+if (canBuy) {
+    console.log('Может купить наш курс');
+} else if (money >= 5) {
+    console.log('Может купить мини курс')
+} else {
+    console.log ('Недостаточно средств для покупки');
+};
