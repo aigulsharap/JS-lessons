@@ -33,8 +33,46 @@ if (Number(secretNumber) === 7) {
     console.log('Угадал')
 }
 
-const q = Number(prompt('Введите число'));
+// const q = Number(prompt('Введите число'));
 
-if (q === 2) {
-    console.log('Угадал')
+// if (q === 2) {
+//     console.log('Угадал')
+// }
+
+const role = 'manager';
+
+if (role === 'manager') {
+    console.log('Менеджер');
+} else if (role === 'admin') {
+    console.log('Админ');
+} else if (role === 'seo') {
+    console.log('СЕО');
+} else {
+    console.log('Мы тебя не знаем');
+}
+
+switch (role) {
+    case 'manager':
+        console.log('Менеджер');
+        break;
+    case 'admin':
+        console.log('Админ');
+        break;
+    case 'seo':
+        console.log('СЕО');
+        break;
+    default:
+        console.log('Мы тебя не знаем');
+}
+
+switch (role) {
+    case 'manager':
+    case 'admin':
+        console.log('Не руководитель');
+        break;
+    case 'seo':
+        console.log('Руководитель');
+        break;
+    default:
+        console.log('Мы тебя не знаем');
 }
