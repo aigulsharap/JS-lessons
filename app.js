@@ -26,3 +26,15 @@ if (amountOfSavings >= housePrice) {
 } else {
     console.log(`Вася не сможет купить дом стоимостью ${housePrice}$ через ${depositYears} лет, положив под ${rate * 100}% годовых с ежемесячной капитализацией процентов`)
 }
+
+const secretNumber = 7;
+
+if (Number(secretNumber) === 7) {
+    console.log('Угадал')
+}
+
+const q = Number(prompt('Введите число'));
+
+if (q === 2) {
+    console.log('Угадал')
+}
