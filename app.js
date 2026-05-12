@@ -33,11 +33,11 @@ if (Number(secretNumber) === 7) {
     console.log('Угадал')
 }
 
-// const q = Number(prompt('Введите число'));
+const q = Number(prompt('Введите число'));
 
-// if (q === 2) {
-//     console.log('Угадал')
-// }
+if (q === 2) {
+    console.log('Угадал')
+}
 
 const role = 'manager';
 
