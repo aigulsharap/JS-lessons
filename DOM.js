@@ -37,20 +37,10 @@ function inputChanged(e) {
     } 
 }
 
-function findClass() {
-    const one = document.querySelectorAll('.one');
-    one.forEach(element => {
-        console.log(element.innerText);
-    });
-}
-
-function findId() {
-    console.log(document.querySelector('#two').innerText);
-}
-
-findClass();
-findId();
-console.log(document.querySelector('[user-id="4"]').innerText);
-console.log(document.querySelectorAll('.one')[0].innerText);
-console.log(document.querySelectorAll('.one')[1].innerText);
-console.log(document.getElementById('two').innerText);
+const panelText2 = 'Панель';
+const panelClass = 'button';
+const newElement = document.createElement('div');
+newElement.setAttribute('user-id', 1);
+newElement.classList.add('panel');
+newElement.innerHTML = `<button class='${panelClass}'>${panelText2}</button>`;
+document.querySelector('.test').appendChild(newElement);
