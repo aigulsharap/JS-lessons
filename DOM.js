@@ -1,3 +1,5 @@
+'use strict'
+
 const panelText = document.querySelector('.panel').innerText;
 console.log(panelText);
 document.querySelector('.panel').innerText = 'New text';
@@ -20,9 +22,13 @@ function submitForm() {
     }
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
-    // document.querySelector('.notification').classList.remove('notification_hidden');
+    // document.querySelector('.notification').classList.remove('notification_hidden'); 
     console.log(document.querySelector('.notification').getAttribute('class'));
     document.querySelector('.notification').setAttribute('class', 'notification');
+    let textString = JSON.stringify({
+        text: input
+    });
+    localStorage.setItem('text', textString);
 }
 
 // document.querySelector('.input').addEventListener('keydown', (e) => {
@@ -37,9 +43,7 @@ function inputChanged(e) {
     } 
 }
 
-localStorage.setItem('token', 'sdsd');
-localStorage.setItem('token1', true);
-const token1 = localStorage.getItem('token1');
-console.log(typeof token1);
-localStorage.removeItem('token1');
-localStorage.clear();
+const obj = JSON.parse('{ "a": 1 }');
+console.log(obj);
+const str = JSON.stringify(obj);
+console.log(str);
